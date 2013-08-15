@@ -15,8 +15,8 @@ namespace feedbacksys.Controllers
 
         public ActionResult Index()
         {
-            //var repository = new ImageRepository();
-            //repository.Create(new Image() {comment = "comment", email = "email", img = "img", title = "title"});
+            var repository = new ImageRepository();
+            repository.Create(new Image() {comment = "comment", email = "email", img = "img", title = "title"});
             return View();
         }
         public ActionResult List()
