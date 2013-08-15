@@ -1,0 +1,17 @@
+﻿@model System.Collections.Generic.List<feedbacksys.Domain.Image>
+
+@{
+    ViewBag.Title = "title";
+
+}
+
+<h2>title</h2>
+<table>
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.title</td>
+            <td>@m.comment</td>
+        </tr>
+    }
+</table>
