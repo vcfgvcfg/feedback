@@ -860,20 +860,10 @@
 
     window.Feedback.XHR.prototype.send = function (data, callback) {
 
-        var xhr = this.xhr;
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4) {
-                callback((xhr.status === 200));
-            }
-        };
-
-        xhr.open("POST", this.url, true);
-        var feedbackdata = { "img": null, "comment": null, "email": null, "title": null, "Issue": null, "data": null, "id": 0 };
-        feedbackdata.img = data[1];
-        feedbackdata.Issue = data[0];
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.send("data=" + encodeURIComponent(window.JSON.stringify(feedbackdata)));
+        var feedback = { "img": "ddd", "comment": "cddd", "email": null, "title": null,  "id": 0 };
+        feedback.img = data[1];
+     
+        $.post(this.url, feedback);
 
     };
 })(window, document);

@@ -10,9 +10,6 @@ namespace feedbacksys.Controllers
         [System.Web.Mvc.HttpPost]
         public void Post(Image img)
         {
-           
-            ControllerContext.Request.Headers.Add("Access-Control-Allow-Origin", "*");
-            ControllerContext.Request.Headers.Add("Access-Control-Allow-Credentials", "true");
             var repository = new ImageRepository();
             repository.Create(img);
         }

@@ -18,8 +18,6 @@ namespace feedbacksys.Domain
         public string comment { get; set; }
         public string email { get; set; }
         public string title { get; set; }
-        public string Issue { get; set; }
-        public string data { get; set; }
         public int id { get; set; }
     }
 }
