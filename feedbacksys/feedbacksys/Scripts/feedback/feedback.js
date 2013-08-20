@@ -869,8 +869,11 @@
         };
 
         xhr.open("POST", this.url, true);
+        var feedbackdata = { "img": null, "comment": null, "email": null, "title": null, "Issue": null, "data": null, "id": 0 };
+        feedbackdata.img = data[1];
+        feedbackdata.Issue = data[0];
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.send("data=" + encodeURIComponent(window.JSON.stringify(data)));
+        xhr.send("data=" + encodeURIComponent(window.JSON.stringify(feedbackdata)));
 
     };
 })(window, document);
