@@ -133,6 +133,7 @@
     <Compile Include="Domain\Image.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Mailer.cs" />
     <Compile Include="Domain\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
