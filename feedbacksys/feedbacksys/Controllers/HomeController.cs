@@ -24,6 +24,13 @@ namespace feedbacksys.Controllers
             return View(models);
 
         }
+
+        public ActionResult Detail(int id)
+        {
+            var repository = new ImageRepository();
+            var model = repository.Find(r => r.id == id);
+            return View(model);
+        }
         
     }
 }

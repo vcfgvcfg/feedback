@@ -12,6 +12,8 @@ namespace feedbacksys.Controllers
         {
             var repository = new ImageRepository();
             repository.Create(img);
+
         }
+        
     }
 }

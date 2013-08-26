@@ -11,9 +11,9 @@
     {
         <tr>
             <td>@m.title</td>
-            <td>@m.Issue</td>
+            <td>@m.comment</td>
             <td>
-                <img src ="@m.img"/>
+               <a href="@Url.Action("Index",m.id)"></a>
             </td>
         </tr>
     }
