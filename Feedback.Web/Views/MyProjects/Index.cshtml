@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Feedback.Core.Models.Project>
+@{
+    ViewBag.Title = "My Projects";
+}
+<h1>My Projects</h1>
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Project Name</th>
+                <th>Project Token</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" value="@p.Id" />
+                </td>
+                <td>@p.Name</td>
+                <td>@p.ProjectToken</td>
+                <td>
+                    <a href="">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
